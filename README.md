@@ -51,6 +51,9 @@ A face recognition project using PCA and LDA algorithms.
     # Step 6: Return the dominant eigenvectors
     return new_space
 ```
+
+## Comparing to Non-Faces Dataset
+- We compared the results of the PCA and LDA algorithms to the results of the same algorithms on a non-faces dataset. The non-faces dataset is the []() dataset. The results are discussed inside the [notebook](faces_vs_nonfaces.ipynb) and in the [Results](#results) section.
 ## Results
 
 ## Contributers
