@@ -10,6 +10,8 @@ A face recognition project using PCA and LDA algorithms.
     + [PCA](#pca)
     + [LDA](#lda)
         - [Pseudo Code](#pseudo-code)
+        - [Using K-NN Classifier after LDA](#using-k-nn-classifier-after-lda)
+  * [Comparing to Non-Faces Dataset](#comparing-to-non-faces-dataset)
   * [Results](#results)
   * [Contributers](#contributers)
 
