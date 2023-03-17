@@ -1,5 +1,7 @@
 # Face Recognition
-A face recognition project using PCA and LDA algorithms.  
+A face recognition project using PCA and LDA algorithms.
+
+> This readME file is a summary of the project. For more details, please refer to the [notebook](faces_vs_nonfaces.ipynb).
 ## Table of Contents
 - [Face Recognition](#face-recognition)
   * [Dataset](#dataset)
@@ -7,6 +9,7 @@ A face recognition project using PCA and LDA algorithms.
   * [Algorithms](#algorithms)
     + [PCA](#pca)
     + [LDA](#lda)
+        - [Pseudo Code](#pseudo-code)
   * [Results](#results)
   * [Contributers](#contributers)
 
@@ -25,6 +28,8 @@ A face recognition project using PCA and LDA algorithms.
 ### PCA
 
 ### LDA 
+- Linear Discriminant Analysis (LDA) is a dimensionality reduction technique that is used to reduce the number of features in a dataset while maintaining the class separability. LDA is a supervised technique, meaning that it uses the class labels to perform the dimensionality reduction. LDA is a popular technique for dimensionality reduction in the field of pattern recognition and machine learning. 
+#### Pseudo Code
 - The pseudo code for the multi-class LDA is as follows:
 ```python
     # Step 1: Compute the overall mean of the training set
