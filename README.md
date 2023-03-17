@@ -52,6 +52,11 @@ A face recognition project using PCA and LDA algorithms.
     return new_space
 ```
 
+#### Using K-NN Classifier after LDA
+- KNN classifier is a non-parametric method used for classification and regression. In both cases, the input consists of the k closest training examples in the feature space. The output is determined by the majority of the classes of the k nearest neighbors.
+- The following graph shows the accuracy of face recognition at different values of k (1-3-5-7)
+ 
+
 ## Comparing to Non-Faces Dataset
 - We compared the results of the PCA and LDA algorithms to the results of the same algorithms on a non-faces dataset. The non-faces dataset is the []() dataset. The results are discussed inside the [notebook](faces_vs_nonfaces.ipynb) and in the [Results](#results) section.
 ## Results
