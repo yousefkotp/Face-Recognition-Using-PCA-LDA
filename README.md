@@ -1,7 +1,7 @@
 # Face Recognition
 A face recognition project using PCA and LDA algorithms.
 
-> This readME file is a summary of the project. For more details, please refer to the [notebook](faces_vs_nonfaces.ipynb).
+> This readme file is a summary of the project. For more details, please refer to the [notebook](faces_vs_nonfaces.ipynb).
 ## Table of Contents
 - [Face Recognition](#face-recognition)
   * [Dataset](#dataset)
