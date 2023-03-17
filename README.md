@@ -1,7 +1,7 @@
 # Face Recognition
 A face recognition project using PCA and LDA algorithms.
 
-> This readME file is a summary of the project. For more details, please refer to the [notebook](faces_vs_nonfaces.ipynb).
+> This readme file is a summary of the project. For more details, please refer to the [notebook](faces_vs_nonfaces.ipynb).
 ## Table of Contents
 - [Face Recognition](#face-recognition)
   * [Dataset](#dataset)
@@ -10,6 +10,8 @@ A face recognition project using PCA and LDA algorithms.
     + [PCA](#pca)
     + [LDA](#lda)
         - [Pseudo Code](#pseudo-code)
+        - [Using K-NN Classifier after LDA](#using-k-nn-classifier-after-lda)
+  * [Comparing to Non-Faces Dataset](#comparing-to-non-faces-dataset)
   * [Results](#results)
   * [Contributers](#contributers)
 
@@ -51,6 +53,16 @@ A face recognition project using PCA and LDA algorithms.
     # Step 6: Return the dominant eigenvectors
     return new_space
 ```
+
+#### Using K-NN Classifier after LDA
+- KNN classifier is a non-parametric method used for classification and regression. In both cases, the input consists of the k closest training examples in the feature space. The output is determined by the majority of the classes of the k nearest neighbors.
+- The following graph shows the accuracy of face recognition at different values of k (1-3-5-7)
+
+![image](https://user-images.githubusercontent.com/41492875/226025723-23c4666d-f028-4d71-a146-f791358fd5e7.png)
+
+
+## Comparing to Non-Faces Dataset
+- We compared the results of the PCA and LDA algorithms to the results of the same algorithms on a non-faces dataset. The non-faces dataset is the []() dataset. The results are discussed inside the [notebook](faces_vs_nonfaces.ipynb) and in the [Results](#results) section.
 ## Results
 
 ## Contributers
