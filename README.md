@@ -192,6 +192,13 @@ so the number of principle components needed to handle the same total percentage
 ## Comparing to Non-Faces Dataset
 - We compared the results of the PCA and LDA algorithms to the results of the same algorithms on a non-faces dataset. The non-faces dataset is the []() dataset. The results are discussed inside the [notebook](faces_vs_nonfaces.ipynb).
 
+## Faces VS Non-Faces Solutions__
+
+1. Success & failure cases can be found in sections 3.2.3 (PCA) and 4.2.3 (LDA)
+2. We will use 1 dominant eigenvector for LDA as we have 2 classes
+3. Accuracy vs number of non-face images used for training can be found in section 3.2.2 (PCA) and 4.2.2 (LDA)
+4. As the number of non-face images increases, the accuracy of the classifier decreases, in contrast to what might be expected. This is because the number of points in the space increases, and the K-NN classifier is more likely to be confused by the noise in the data. This is a limitation of the classifier, and is not a problem with the data. The noise causes the space to be more complex and the gaps between the classes to be smaller and smaller which is more likely to cause confusion for the K-NN classifier.
+
 ## Contributers
 
 - [Yousef Kotp](https://github.com/yousefkotp)
