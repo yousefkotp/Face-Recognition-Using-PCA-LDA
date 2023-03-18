@@ -187,7 +187,7 @@ so the number of principle components needed to handle the same total percentage
 
 #### Figure showing accuracies for LDA variations
 
-
+![image](https://user-images.githubusercontent.com/41492875/226120140-bc599977-d70a-4b75-8b53-cdb52f042014.png)
 
 ## Comparing to Non-Faces Dataset
 - We compared the results of the PCA and LDA algorithms to the results of the same algorithms on a non-faces dataset. The non-faces dataset is the []() dataset. The results are discussed inside the [notebook](faces_vs_nonfaces.ipynb).
