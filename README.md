@@ -4,16 +4,30 @@ A face recognition project using PCA and LDA algorithms.
 > This readme file is a summary of the project. For more details, please refer to the [notebook](faces_vs_nonfaces.ipynb).
 ## Table of Contents
 - [Face Recognition](#face-recognition)
+  * [Table of Contents](#table-of-contents)
   * [Dataset](#dataset)
     + [Data Splitting](#data-splitting)
   * [Algorithms](#algorithms)
     + [PCA](#pca)
+      - [Pseudo Code](#pseudo-code)
+      - [The first 2 Eigen-Faces](#the-first-2-eigen-faces)
+    + [Comparing different values of alpha to their corresponding accuracies](#comparing-different-values-of-alpha-to-their-corresponding-accuracies)
+      - [Comparing different values of alpha to their corresponding number of principle components](#comparing-different-values-of-alpha-to-their-corresponding-number-of-principle-components)
+      - [Comparing alpha to their corresponding accuracies after changing percentage of training split into 70% and test split into 30%](#comparing-alpha-to-their-corresponding-accuracies-after-changing-percentage-of-training-split-into-70--and-test-split-into-30-)
+      - [Comparing alpha to their corresponding number of principle components after changing percentage of training split into 70% and test split into 30%](#comparing-alpha-to-their-corresponding-number-of-principle-components-after-changing-percentage-of-training-split-into-70--and-test-split-into-30-)
+      - [Using K-NN Classifier after PCA](#using-k-nn-classifier-after-pca)
+      - [Comparison between different splitting ways](#comparison-between-different-splitting-ways)
+      - [Using PCA Variations](#using-pca-variations)
+        * [Randomized PCA](#randomized-pca)
+        * [Kernel PCA](#kernel-pca)
+      - [Figure showing accuracies for PCA variations](#figure-showing-accuracies-for-pca-variations)
     + [LDA](#lda)
-        - [Pseudo Code](#pseudo-code)
-        - [Using K-NN Classifier after LDA](#using-k-nn-classifier-after-lda)
+      - [Pseudo Code](#pseudo-code-1)
+      - [Using K-NN Classifier after LDA](#using-k-nn-classifier-after-lda)
   * [Comparing to Non-Faces Dataset](#comparing-to-non-faces-dataset)
   * [Results](#results)
   * [Contributers](#contributers)
+
 
 ## Dataset
 - Our dataset for this project is the [AT&T Face Database](https://www.kaggle.com/datasets/kasikrit/att-database-of-faces). The dataset is open-source and can be downloaded from Kaggle.
@@ -63,38 +77,38 @@ Principal Component Analysis (PCA) is a dimensionality reduction technique that 
     return new_space
 
 ```
-### The first 2 Eigen-Faces
+#### The first 2 Eigen-Faces
 
 ![image](https://user-images.githubusercontent.com/84376570/226113767-05d70c78-6322-46bd-9952-c6d1c7a2bf2c.png)
 ![image](https://user-images.githubusercontent.com/84376570/226113790-6725cba6-696b-4edc-9b90-b6f745411572.png)
-##  Comparing different values of alpha to their corresponding accuracies
+###  Comparing different values of alpha to their corresponding accuracies
 - this figure shows that accuracy increases as alpha increases until a certain limit.
 ![image](https://user-images.githubusercontent.com/84376570/226113140-86c43a1e-192d-4224-b460-1992fd76757f.png)
 
 
-## Comparing different values of alpha to their corresponding number of principle components
+#### Comparing different values of alpha to their corresponding number of principle components
 - this figure shows that number of principle components increase as alpha increases.
 ![image](https://user-images.githubusercontent.com/84376570/226113163-8adc3be7-12bb-4005-8c62-703e595a8aef.png)
 
-## Comparing alpha to their corresponding accuracies after changing percentage of training split into 70% and test split into 30%
+#### Comparing alpha to their corresponding accuracies after changing percentage of training split into 70% and test split into 30%
 - this figure shows that accuracy increases as alpha increases.
 - it is obvious that the curve has the same shape as the last splits but with higher values as the training data has increased.
 ![image](https://user-images.githubusercontent.com/84376570/226113239-2459a38b-1924-4679-8bd6-1cb6800b8a7f.png)
 
 
 
-## Comparing alpha to their corresponding number of principle components after changing percentage of training split into 70% and test split into 30%
+#### Comparing alpha to their corresponding number of principle components after changing percentage of training split into 70% and test split into 30%
 - this figure shows that number of principle components increase as alpha increases until a certain limit.
 - it is obvious that the curve has the same shape as the last splits but with higher values as the training data has increased
 so the number of principle components needed to handle the same total percentage of the variance increased.
 ![image](https://user-images.githubusercontent.com/84376570/226113277-9f70238f-c133-48c5-9b5e-f7edeb73ba0e.png)
 
-### Using K-NN Classifier after PCA
+#### Using K-NN Classifier after PCA
 - KNN classifier is a non-parametric method used for classification and regression. In both cases, the input consists of the k closest training examples in the feature space. The output is determined by the majority of the classes of the k nearest neighbors.
 - The following graph shows the accuracy of face recognition at different values of k (1-3-5-7)
 ![image](https://user-images.githubusercontent.com/84376570/226113360-f4b42806-89fd-4600-ba7c-e5e662754585.png)
 
-### Comparison between different splitting ways
+#### Comparison between different splitting ways
 - this table shows difference in accuracies
 - ![image](https://user-images.githubusercontent.com/84376570/226113668-e477a959-43d0-4fcb-8468-38b3c4d69b27.png)
 
@@ -102,23 +116,21 @@ so the number of principle components needed to handle the same total percentage
 - this table shows difference in number of principle components
 ![image](https://user-images.githubusercontent.com/84376570/226113679-1aa2a029-c65d-426f-bd6d-cd1949f05724.png)
 
-# Using PCA Variations
+#### Using PCA Variations
 
-- ## Randomized PCA
+##### Randomized PCA
   - Randomized PCA is a faster and more memory-efficient version of PCA that uses randomized matrix approximations to estimate the principal components of the data. This approach involves sampling subsets of the data and computing the eigenvectors of the resulting covariance matrix, which can be done more efficiently than computing the eigenvectors of the full covariance matrix.
   - the randomised version of PCA operates in O(nd^2) + O(d^3) where d is the number of principle components, conventional PCA operates in O(np^2) + O(p^3) where n is the number of data points and p is the number of features. Therefore, it moves extremely quickly when d is significantly smaller than n.
 
-- ## Kernel PCA
+##### Kernel PCA
   - Kernel PCA is a non-linear dimensionality reduction technique that uses a kernel function to map high-dimensional data into a lower-dimensional space. This allows it to capture non-linear relationships between variables that are not possible with linear PCA.
   - The time complexity of normal PCA is O(d^3), where d is the number of dimensions, while the time complexity of kernel PCA is O(n^3), where n is the number of data points. The computation of the kernel matrix is the most computationally expensive step in kernel PCA.
   - Kernel PCA may be more accurate than normal PCA for datasets with non-linear relationships between variables, as it can capture these relationships. However, kernel PCA is more prone to overfitting than normal PCA, and the choice of kernel function can greatly affect the performance of kernel PCA.
 
-## Figure showing accuracies for PCA variations
+#### Figure showing accuracies for PCA variations
 - Kernel PCA, specifically using the radial basis function (RBF) kernel, may fail when the dataset has a large number of dimensions or when the number of data points is much larger than the number of dimensions. This is because the kernel matrix can become very large and computationally expensive to compute and manipulate. Additionally, the choice of kernel function and its parameters can greatly affect the performance of kernel PCA. In contrast, normal PCA may perform better in high-dimensional datasets or when the relationships between variables are linear, as it is designed to capture linear relationships between variables.
 - RBF kernel PCA uses the radial basis function kernel, which is a Gaussian function that measures the distance between data points in the original space. This kernel is useful for capturing non-linear relationships between variables that cannot be captured by linear PCA.While Polynomial kernel PCA uses a polynomial kernel, which is a power function that measures the dot product between data points in the original space raised to a certain power. This kernel is also useful for capturing non-linear relationships between variables, but is more sensitive to outliers and noise than the RBF kernel.
 - ![image](https://user-images.githubusercontent.com/84376570/226116045-eb0d999c-74f4-413a-8fb0-497f218c7dbc.png)
-
-
 
 
 
