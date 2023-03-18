@@ -25,7 +25,6 @@ A face recognition project using PCA and LDA algorithms.
       - [Pseudo Code](#pseudo-code-1)
       - [Using K-NN Classifier after LDA](#using-k-nn-classifier-after-lda)
   * [Comparing to Non-Faces Dataset](#comparing-to-non-faces-dataset)
-  * [Results](#results)
   * [Contributers](#contributers)
 
 
@@ -34,7 +33,7 @@ A face recognition project using PCA and LDA algorithms.
 - The dataset contains 400 images of 40 people. Each person has 10 images. The images are of size 92x112 pixels. The images are in grayscale. The images are in the form of a numpy array. The images are stored in the `archive` folder.
 
 ### Data Splitting
-- We tried splitting the dataset into training and testing sets. one split was 50-50 and the other one is 70-30. The results are discussed inside the [notebook](faces_vs_nonfaces.ipynb) and in the [Results](#results) section.
+- We tried splitting the dataset into training and testing sets. one split was 50-50 and the other one is 70-30. The results are discussed inside the [notebook](faces_vs_nonfaces.ipynb).
 
 ## Algorithms 
 - Two algorithms were used in the facial recognition for the mentioned dataset which are:
@@ -169,8 +168,7 @@ so the number of principle components needed to handle the same total percentage
 
 
 ## Comparing to Non-Faces Dataset
-- We compared the results of the PCA and LDA algorithms to the results of the same algorithms on a non-faces dataset. The non-faces dataset is the []() dataset. The results are discussed inside the [notebook](faces_vs_nonfaces.ipynb) and in the [Results](#results) section.
-## Results
+- We compared the results of the PCA and LDA algorithms to the results of the same algorithms on a non-faces dataset. The non-faces dataset is the []() dataset. The results are discussed inside the [notebook](faces_vs_nonfaces.ipynb).
 
 ## Contributers
 
