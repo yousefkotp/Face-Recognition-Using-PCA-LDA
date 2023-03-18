@@ -70,16 +70,25 @@ Principal Component Analysis (PCA) is a dimensionality reduction technique that 
 
 ### Comparing different values of alpha to their corresponding accuracies
 
-
-
-
-
+![image](https://user-images.githubusercontent.com/84376570/226113140-86c43a1e-192d-4224-b460-1992fd76757f.png)
 
 
 ### comparing different values of alpha to their corresponding number of principle components
 
+![image](https://user-images.githubusercontent.com/84376570/226113163-8adc3be7-12bb-4005-8c62-703e595a8aef.png)
+
+### comparing alpha to their corresponding accuracies after changing percentage of training split into 70% and test split into 30%
+![image](https://user-images.githubusercontent.com/84376570/226113239-2459a38b-1924-4679-8bd6-1cb6800b8a7f.png)
 
 
+
+### comparing alpha to their corresponding number of principle components after changing percentage of training split into 70% and test split into 30%
+![image](https://user-images.githubusercontent.com/84376570/226113277-9f70238f-c133-48c5-9b5e-f7edeb73ba0e.png)
+
+#### Using K-NN Classifier after PCA
+- KNN classifier is a non-parametric method used for classification and regression. In both cases, the input consists of the k closest training examples in the feature space. The output is determined by the majority of the classes of the k nearest neighbors.
+- The following graph shows the accuracy of face recognition at different values of k (1-3-5-7)
+![image](https://user-images.githubusercontent.com/84376570/226113360-f4b42806-89fd-4600-ba7c-e5e662754585.png)
 
 
 
