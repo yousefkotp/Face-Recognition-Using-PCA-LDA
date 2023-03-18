@@ -63,8 +63,10 @@ Principal Component Analysis (PCA) is a dimensionality reduction technique that 
     return new_space
 
 ```
-### The first 3 Eigen-Faces
+### The first 2 Eigen-Faces
 
+![image](https://user-images.githubusercontent.com/84376570/226112967-484b8bdd-6262-4c3d-b8c7-9457ce20ccd5.png)
+![image](https://user-images.githubusercontent.com/84376570/226112979-b4425370-2c27-4b4e-8e2b-c4cd4d6c32b2.png)
 
 
 
