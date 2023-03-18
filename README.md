@@ -72,18 +72,18 @@ Principal Component Analysis (PCA) is a dimensionality reduction technique that 
 ![image](https://user-images.githubusercontent.com/84376570/226113140-86c43a1e-192d-4224-b460-1992fd76757f.png)
 
 
-## comparing different values of alpha to their corresponding number of principle components
+## Comparing different values of alpha to their corresponding number of principle components
 - this figure shows that number of principle components increase as alpha increases.
 ![image](https://user-images.githubusercontent.com/84376570/226113163-8adc3be7-12bb-4005-8c62-703e595a8aef.png)
 
-## comparing alpha to their corresponding accuracies after changing percentage of training split into 70% and test split into 30%
+## Comparing alpha to their corresponding accuracies after changing percentage of training split into 70% and test split into 30%
 - this figure shows that accuracy increases as alpha increases.
 - it is obvious that the curve has the same shape as the last splits but with higher values as the training data has increased.
 ![image](https://user-images.githubusercontent.com/84376570/226113239-2459a38b-1924-4679-8bd6-1cb6800b8a7f.png)
 
 
 
-## comparing alpha to their corresponding number of principle components after changing percentage of training split into 70% and test split into 30%
+## Comparing alpha to their corresponding number of principle components after changing percentage of training split into 70% and test split into 30%
 - this figure shows that number of principle components increase as alpha increases until a certain limit.
 - it is obvious that the curve has the same shape as the last splits but with higher values as the training data has increased
 so the number of principle components needed to handle the same total percentage of the variance increased.
