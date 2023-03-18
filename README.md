@@ -24,6 +24,10 @@ A face recognition project using PCA and LDA algorithms.
     + [LDA](#lda)
       - [Pseudo Code](#pseudo-code-1)
       - [Using K-NN Classifier after LDA](#using-k-nn-classifier-after-lda)
+      - [Comparison between different splitting ways](#comparison-between-different-splitting-ways-1)
+      - [Using LDA Variations](#using-lda-variations)
+        * [Kernel LDA](#kernel-lda)
+      - [Figure showing accuracies for LDA variations](#figure-showing-accuracies-for-lda-variations)
   * [Comparing to Non-Faces Dataset](#comparing-to-non-faces-dataset)
   * [Contributers](#contributers)
 
@@ -160,11 +164,29 @@ so the number of principle components needed to handle the same total percentage
     return new_space
 ```
 
+
 #### Using K-NN Classifier after LDA
 - KNN classifier is a non-parametric method used for classification and regression. In both cases, the input consists of the k closest training examples in the feature space. The output is determined by the majority of the classes of the k nearest neighbors.
 - The following graph shows the accuracy of face recognition at different values of k (1-3-5-7)
 
 ![image](https://user-images.githubusercontent.com/41492875/226025723-23c4666d-f028-4d71-a146-f791358fd5e7.png)
+
+#### Comparison between different splitting ways
+- We Tried splitting the data into training and test in 2 different ways:
+1. 50-50: This splitting resulted in a good accuracy reaching 95.5%
+2. 70-30: This splitting resulted in a slightly better accuracy reaching 95.83%
+
+#### Using LDA Variations
+- We tried using different variations of LDA to see if we can get better results. The variations we tried are:
+##### Shrinkage LDA
+- Shrinkage LDA (Linear Discriminant Analysis) is a variant of the standard LDA method that is used for classification and dimensionality reduction. The key difference between shrinkage LDA and normal LDA is that the former incorporates a regularization term that shrinks the sample covariance matrix towards a diagonal matrix.
+
+- This regularization is particularly useful when dealing with high-dimensional data, as it helps to overcome the small sample size problem by stabilizing the covariance estimates. Shrinkage LDA has been shown to outperform traditional LDA in terms of classification accuracy, especially when the number of features is much larger than the number of observations.
+
+- Another advantage of shrinkage LDA is that it can handle multicollinearity between the predictor variables, which can be a problem in standard LDA when the predictors are highly correlated. In summary, shrinkage LDA is a powerful tool for classification and dimensionality reduction that can improve the accuracy of LDA in high-dimensional and small sample size settings.
+
+#### Figure showing accuracies for LDA variations
+
 
 
 ## Comparing to Non-Faces Dataset
