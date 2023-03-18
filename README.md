@@ -68,22 +68,25 @@ Principal Component Analysis (PCA) is a dimensionality reduction technique that 
 ![image](https://user-images.githubusercontent.com/84376570/226113767-05d70c78-6322-46bd-9952-c6d1c7a2bf2c.png)
 ![image](https://user-images.githubusercontent.com/84376570/226113790-6725cba6-696b-4edc-9b90-b6f745411572.png)
 ##  Comparing different values of alpha to their corresponding accuracies
-- this figure shows that accuracy increases as alpha increases until a certain limit
+- this figure shows that accuracy increases as alpha increases until a certain limit.
 ![image](https://user-images.githubusercontent.com/84376570/226113140-86c43a1e-192d-4224-b460-1992fd76757f.png)
 
 
 ## comparing different values of alpha to their corresponding number of principle components
-- this figure shows that number of principle components increase as alpha increases until a certain limit
+- this figure shows that number of principle components increase as alpha increases.
 ![image](https://user-images.githubusercontent.com/84376570/226113163-8adc3be7-12bb-4005-8c62-703e595a8aef.png)
 
 ## comparing alpha to their corresponding accuracies after changing percentage of training split into 70% and test split into 30%
-- this figure shows that accuracy increases as alpha increases until a certain limit
+- this figure shows that accuracy increases as alpha increases.
+- it is obvious that the curve has the same shape as the last splits but with higher values as the training data has increased.
 ![image](https://user-images.githubusercontent.com/84376570/226113239-2459a38b-1924-4679-8bd6-1cb6800b8a7f.png)
 
 
 
 ## comparing alpha to their corresponding number of principle components after changing percentage of training split into 70% and test split into 30%
-- this figure shows that number of principle components increase as alpha increases until a certain limit
+- this figure shows that number of principle components increase as alpha increases until a certain limit.
+- it is obvious that the curve has the same shape as the last splits but with higher values as the training data has increased
+so the number of principle components needed to handle the same total percentage of the variance increased.
 ![image](https://user-images.githubusercontent.com/84376570/226113277-9f70238f-c133-48c5-9b5e-f7edeb73ba0e.png)
 
 ### Using K-NN Classifier after PCA
@@ -98,6 +101,18 @@ Principal Component Analysis (PCA) is a dimensionality reduction technique that 
 
 - this table shows difference in number of principle components
 ![image](https://user-images.githubusercontent.com/84376570/226113679-1aa2a029-c65d-426f-bd6d-cd1949f05724.png)
+
+# Using PCA Variations
+
+- ## Randomized PCA
+  - Randomized PCA is a faster and more memory-efficient version of PCA that uses randomized matrix approximations to estimate the principal components of the data. This approach involves sampling subsets of the data and computing the eigenvectors of the resulting covariance matrix, which can be done more efficiently than computing the eigenvectors of the full covariance matrix.
+  - the randomised version of PCA operates in O(nd^2) + O(d^3) where d is the number of principle components, conventional PCA operates in O(n*p^2) + O(p^3) where n is the number of data points and p is the number of features. Therefore, it moves extremely quickly when d is significantly smaller than n.
+
+- ## Kernel PCA
+  - Kernel PCA is a non-linear dimensionality reduction technique that uses a kernel function to map high-dimensional data into a lower-dimensional space. This allows it to capture non-linear relationships between variables that are not possible with linear PCA.
+  - 
+
+
 
 ### LDA 
 - Linear Discriminant Analysis (LDA) is a dimensionality reduction technique that is used to reduce the number of features in a dataset while maintaining the class separability. LDA is a supervised technique, meaning that it uses the class labels to perform the dimensionality reduction. LDA is a popular technique for dimensionality reduction in the field of pattern recognition and machine learning. 
