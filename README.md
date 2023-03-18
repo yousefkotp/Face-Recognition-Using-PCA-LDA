@@ -28,9 +28,66 @@ A face recognition project using PCA and LDA algorithms.
 2- LDA: Linear Discriminant Analysis
 
 ### PCA
+Principal Component Analysis (PCA) is a dimensionality reduction technique that is used to extract important features from high-dimensional datasets. PCA works by identifying the principal components of the data, which are linear combinations of the original features that capture the most variation in the data.
+
+#### Pseudo Code
+- The pseudo code for the PCA:
+```python
+    # computing the mean
+    means=np.mean(training_set,axis=0).reshape(1,10304)
+    # centering the data
+    centered_training_set=training_set-means
+    # computing the covariance matrix
+    covariance_matrix=np.cov(centered_training_set.T,bias=True)
+    # computing the eigen vectors & eigen values
+    eigenvalues,eigenvectors=np.linalg.eigh(covariance_matrix)
+    
+    # sorting eigen vectors according to their corresponding eigen values
+    positions = eigenvalues.argsort()[::-1]
+    
+    sorted_eigenvectors = (eigenvectors[:,positions])
+    
+    total = sum(eigenvalues)
+    
+    # getting the required pcs to reach a certain alpha
+    r = 0
+    
+    current_sum = 0
+
+    while current_sum/total < alpha:
+        current_sum += eigenvalues[r]
+        r += 1
+    # getting the new space that the data will be projected to it 
+    new_space = eigenvectors[:, :r]   
+
+    return new_space
+
+```
+### The first 2 Eigen-Faces
+
+![image](https://user-images.githubusercontent.com/84376570/226112967-484b8bdd-6262-4c3d-b8c7-9457ce20ccd5.png)
+![image](https://user-images.githubusercontent.com/84376570/226112979-b4425370-2c27-4b4e-8e2b-c4cd4d6c32b2.png)
+
+### Comparing different values of alpha to their corresponding accuracies
+
+
+
+
+
+
+
+### comparing different values of alpha to their corresponding number of principle components
+
+
+
+
+
+
 
 ### LDA 
 - Linear Discriminant Analysis (LDA) is a dimensionality reduction technique that is used to reduce the number of features in a dataset while maintaining the class separability. LDA is a supervised technique, meaning that it uses the class labels to perform the dimensionality reduction. LDA is a popular technique for dimensionality reduction in the field of pattern recognition and machine learning. 
+
+
 #### Pseudo Code
 - The pseudo code for the multi-class LDA is as follows:
 ```python
