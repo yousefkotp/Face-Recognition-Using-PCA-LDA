@@ -11,7 +11,7 @@ A face recognition project using PCA and LDA algorithms.
     + [PCA](#pca)
       - [Pseudo Code](#pseudo-code)
       - [The first 2 Eigen-Faces](#the-first-2-eigen-faces)
-    + [Comparing different values of alpha to their corresponding accuracies](#comparing-different-values-of-alpha-to-their-corresponding-accuracies)
+      - [Comparing different values of alpha to their corresponding accuracies](#comparing-different-values-of-alpha-to-their-corresponding-accuracies)
       - [Comparing different values of alpha to their corresponding number of principle components](#comparing-different-values-of-alpha-to-their-corresponding-number-of-principle-components)
       - [Comparing alpha to their corresponding accuracies after changing percentage of training split into 70% and test split into 30%](#comparing-alpha-to-their-corresponding-accuracies-after-changing-percentage-of-training-split-into-70--and-test-split-into-30-)
       - [Comparing alpha to their corresponding number of principle components after changing percentage of training split into 70% and test split into 30%](#comparing-alpha-to-their-corresponding-number-of-principle-components-after-changing-percentage-of-training-split-into-70--and-test-split-into-30-)
@@ -81,7 +81,7 @@ Principal Component Analysis (PCA) is a dimensionality reduction technique that 
 
 ![image](https://user-images.githubusercontent.com/84376570/226113767-05d70c78-6322-46bd-9952-c6d1c7a2bf2c.png)
 ![image](https://user-images.githubusercontent.com/84376570/226113790-6725cba6-696b-4edc-9b90-b6f745411572.png)
-###  Comparing different values of alpha to their corresponding accuracies
+####  Comparing different values of alpha to their corresponding accuracies
 - this figure shows that accuracy increases as alpha increases until a certain limit.
 ![image](https://user-images.githubusercontent.com/84376570/226113140-86c43a1e-192d-4224-b460-1992fd76757f.png)
 
@@ -110,7 +110,8 @@ so the number of principle components needed to handle the same total percentage
 
 #### Comparison between different splitting ways
 - this table shows difference in accuracies
-- ![image](https://user-images.githubusercontent.com/84376570/226113668-e477a959-43d0-4fcb-8468-38b3c4d69b27.png)
+
+![image](https://user-images.githubusercontent.com/84376570/226113668-e477a959-43d0-4fcb-8468-38b3c4d69b27.png)
 
 
 - this table shows difference in number of principle components
@@ -130,10 +131,8 @@ so the number of principle components needed to handle the same total percentage
 #### Figure showing accuracies for PCA variations
 - Kernel PCA, specifically using the radial basis function (RBF) kernel, may fail when the dataset has a large number of dimensions or when the number of data points is much larger than the number of dimensions. This is because the kernel matrix can become very large and computationally expensive to compute and manipulate. Additionally, the choice of kernel function and its parameters can greatly affect the performance of kernel PCA. In contrast, normal PCA may perform better in high-dimensional datasets or when the relationships between variables are linear, as it is designed to capture linear relationships between variables.
 - RBF kernel PCA uses the radial basis function kernel, which is a Gaussian function that measures the distance between data points in the original space. This kernel is useful for capturing non-linear relationships between variables that cannot be captured by linear PCA.While Polynomial kernel PCA uses a polynomial kernel, which is a power function that measures the dot product between data points in the original space raised to a certain power. This kernel is also useful for capturing non-linear relationships between variables, but is more sensitive to outliers and noise than the RBF kernel.
+
 - ![image](https://user-images.githubusercontent.com/84376570/226116045-eb0d999c-74f4-413a-8fb0-497f218c7dbc.png)
-
-
-
 
 ### LDA 
 - Linear Discriminant Analysis (LDA) is a dimensionality reduction technique that is used to reduce the number of features in a dataset while maintaining the class separability. LDA is a supervised technique, meaning that it uses the class labels to perform the dimensionality reduction. LDA is a popular technique for dimensionality reduction in the field of pattern recognition and machine learning. 
