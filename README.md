@@ -115,6 +115,7 @@ so the number of principle components needed to handle the same total percentage
 
 ## Figure showing accuracies for PCA variations
 
+![image](https://user-images.githubusercontent.com/84376570/226116045-eb0d999c-74f4-413a-8fb0-497f218c7dbc.png)
 
 
 
