@@ -65,9 +65,8 @@ Principal Component Analysis (PCA) is a dimensionality reduction technique that 
 ```
 ### The first 2 Eigen-Faces
 
-![image](https://user-images.githubusercontent.com/84376570/226112967-484b8bdd-6262-4c3d-b8c7-9457ce20ccd5.png)
-![image](https://user-images.githubusercontent.com/84376570/226112979-b4425370-2c27-4b4e-8e2b-c4cd4d6c32b2.png)
-
+![image](https://user-images.githubusercontent.com/84376570/226113767-05d70c78-6322-46bd-9952-c6d1c7a2bf2c.png)
+![image](https://user-images.githubusercontent.com/84376570/226113790-6725cba6-696b-4edc-9b90-b6f745411572.png)
 ##  Comparing different values of alpha to their corresponding accuracies
 
 ![image](https://user-images.githubusercontent.com/84376570/226113140-86c43a1e-192d-4224-b460-1992fd76757f.png)
