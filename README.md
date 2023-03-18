@@ -195,11 +195,19 @@ so the number of principle components needed to handle the same total percentage
 ## Faces VS Non-Faces Solutions__
 
 1. Success & failure cases figure
+   - PCA
    - ![image](https://user-images.githubusercontent.com/84376570/226126375-a50263e2-d5c9-40b4-9497-88e8a0387e91.png)
+   - LDA
+   - ![image](https://user-images.githubusercontent.com/84376570/226126647-0dfb68e5-6ff9-4e15-9b28-758d04d1e4cf.png)
+
 
 2. We will use 1 dominant eigenvector for LDA as we have 2 classes
 3. Accuracy vs number of non-face images figure
+    - PCA
     - ![image](https://user-images.githubusercontent.com/84376570/226126339-7bb42742-0965-4453-8074-2fa0bb3de6e1.png)
+    - LDA
+    - ![image](https://user-images.githubusercontent.com/84376570/226126627-0497f70d-5e22-4934-9fd5-71f7a9039f58.png)
+
 4. As the number of non-face images increases, the accuracy of the classifier decreases, in contrast to what might be expected. This is because the number of points in the space increases, and the K-NN classifier is more likely to be confused by the noise in the data. This is a limitation of the classifier, and is not a problem with the data. The noise causes the space to be more complex and the gaps between the classes to be smaller and smaller which is more likely to cause confusion for the K-NN classifier.
   
 
@@ -208,7 +216,7 @@ so the number of principle components needed to handle the same total percentage
 
 - [Yousef Kotp](https://github.com/yousefkotp)
 
-- [Mohammed Farid](https://github.com/MohamedFarid612)
+- [Mohamed Farid](https://github.com/MohamedFarid612)
 
 - [Adham Mohammed](https://github.com/adhammohamed1)
 
