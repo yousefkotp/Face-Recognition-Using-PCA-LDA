@@ -106,7 +106,7 @@ so the number of principle components needed to handle the same total percentage
 
 - ## Randomized PCA
   - Randomized PCA is a faster and more memory-efficient version of PCA that uses randomized matrix approximations to estimate the principal components of the data. This approach involves sampling subsets of the data and computing the eigenvectors of the resulting covariance matrix, which can be done more efficiently than computing the eigenvectors of the full covariance matrix.
-  - the randomised version of PCA operates in O(nd^2) + O(d^3) where d is the number of principle components, conventional PCA operates in O(n*p^2) + O(p^3) where n is the number of data points and p is the number of features. Therefore, it moves extremely quickly when d is significantly smaller than n.
+  - the randomised version of PCA operates in O(nd^2) + O(d^3) where d is the number of principle components, conventional PCA operates in O(np^2) + O(p^3) where n is the number of data points and p is the number of features. Therefore, it moves extremely quickly when d is significantly smaller than n.
 
 - ## Kernel PCA
   - Kernel PCA is a non-linear dimensionality reduction technique that uses a kernel function to map high-dimensional data into a lower-dimensional space. This allows it to capture non-linear relationships between variables that are not possible with linear PCA.
