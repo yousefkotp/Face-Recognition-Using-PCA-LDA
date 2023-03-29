@@ -16,14 +16,14 @@ A face recognition project using PCA and LDA algorithms.
       - [Using PCA Variations](#using-pca-variations)
         * [Randomized PCA](#randomized-pca)
         * [Kernel PCA](#kernel-pca)
-      - [Figure showing accuracies for PCA variations](#figure-showing-accuracies-for-pca-variations)
+      - [Accuracies for PCA variations](#accuracies-for-pca-variations)
     + [LDA](#lda)
       - [Pseudo Code](#pseudo-code-1)
       - [Using K-NN Classifier after LDA](#using-k-nn-classifier-after-lda)
       - [Comparison between different splitting ways](#comparison-between-different-splitting-ways-1)
       - [Using LDA Variations](#using-lda-variations)
         * [Kernel LDA](#kernel-lda)
-      - [Figure showing accuracies for LDA variations](#figure-showing-accuracies-for-lda-variations)
+      - [Accuracies for LDA variations](#accuracies-for-lda-variations)
   * [Comparing to Non-Faces Dataset](#comparing-to-non-faces-dataset)
   * [Contributers](#contributers)
 
@@ -106,7 +106,7 @@ Principal Component Analysis (PCA) is a dimensionality reduction technique that 
   - The time complexity of normal PCA is O(d^3), where d is the number of dimensions, while the time complexity of kernel PCA is O(n^3), where n is the number of data points. The computation of the kernel matrix is the most computationally expensive step in kernel PCA.
   - Kernel PCA may be more accurate than normal PCA for datasets with non-linear relationships between variables, as it can capture these relationships. However, kernel PCA is more prone to overfitting than normal PCA, and the choice of kernel function can greatly affect the performance of kernel PCA.
 
-#### Figure showing accuracies for PCA variations
+#### Accuracies for PCA variations
 - Kernel PCA, specifically using the radial basis function (RBF) kernel, may fail when the dataset has a large number of dimensions or when the number of data points is much larger than the number of dimensions. This is because the kernel matrix can become very large and computationally expensive to compute and manipulate. Additionally, the choice of kernel function and its parameters can greatly affect the performance of kernel PCA. In contrast, normal PCA may perform better in high-dimensional datasets or when the relationships between variables are linear, as it is designed to capture linear relationships between variables.
 - RBF kernel PCA uses the radial basis function kernel, which is a Gaussian function that measures the distance between data points in the original space. This kernel is useful for capturing non-linear relationships between variables that cannot be captured by linear PCA.While Polynomial kernel PCA uses a polynomial kernel, which is a power function that measures the dot product between data points in the original space raised to a certain power. This kernel is also useful for capturing non-linear relationships between variables, but is more sensitive to outliers and noise than the RBF kernel.
 
@@ -160,7 +160,7 @@ Principal Component Analysis (PCA) is a dimensionality reduction technique that 
 
 - Another advantage of shrinkage LDA is that it can handle multicollinearity between the predictor variables, which can be a problem in standard LDA when the predictors are highly correlated. In summary, shrinkage LDA is a powerful tool for classification and dimensionality reduction that can improve the accuracy of LDA in high-dimensional and small sample size settings.
 
-#### Figure showing accuracies for LDA variations
+#### Accuracies for LDA variations
 
 ![image](https://user-images.githubusercontent.com/41492875/226120140-bc599977-d70a-4b75-8b53-cdb52f042014.png)
 
