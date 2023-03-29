@@ -11,10 +11,6 @@ A face recognition project using PCA and LDA algorithms.
     + [PCA](#pca)
       - [Pseudo Code](#pseudo-code)
       - [The first 2 Eigen-Faces](#the-first-2-eigen-faces)
-      - [Comparing different values of alpha to their corresponding accuracies](#comparing-different-values-of-alpha-to-their-corresponding-accuracies)
-      - [Comparing different values of alpha to their corresponding number of principle components](#comparing-different-values-of-alpha-to-their-corresponding-number-of-principle-components)
-      - [Comparing alpha to their corresponding accuracies after changing percentage of training split into 70% and test split into 30%](#comparing-alpha-to-their-corresponding-accuracies-after-changing-percentage-of-training-split-into-70--and-test-split-into-30-)
-      - [Comparing alpha to their corresponding number of principle components after changing percentage of training split into 70% and test split into 30%](#comparing-alpha-to-their-corresponding-number-of-principle-components-after-changing-percentage-of-training-split-into-70--and-test-split-into-30-)
       - [Using K-NN Classifier after PCA](#using-k-nn-classifier-after-pca)
       - [Comparison between different splitting ways](#comparison-between-different-splitting-ways)
       - [Using PCA Variations](#using-pca-variations)
@@ -84,27 +80,6 @@ Principal Component Analysis (PCA) is a dimensionality reduction technique that 
 
 ![image](https://user-images.githubusercontent.com/84376570/226113767-05d70c78-6322-46bd-9952-c6d1c7a2bf2c.png)
 ![image](https://user-images.githubusercontent.com/84376570/226113790-6725cba6-696b-4edc-9b90-b6f745411572.png)
-####  Comparing different values of alpha to their corresponding accuracies
-- this figure shows that accuracy increases as alpha increases until a certain limit.
-![image](https://user-images.githubusercontent.com/84376570/226113140-86c43a1e-192d-4224-b460-1992fd76757f.png)
-
-
-#### Comparing different values of alpha to their corresponding number of principle components
-- this figure shows that number of principle components increase as alpha increases.
-![image](https://user-images.githubusercontent.com/84376570/226113163-8adc3be7-12bb-4005-8c62-703e595a8aef.png)
-
-#### Comparing alpha to their corresponding accuracies after changing percentage of training split into 70% and test split into 30%
-- this figure shows that accuracy increases as alpha increases.
-- it is obvious that the curve has the same shape as the last splits but with higher values as the training data has increased.
-![image](https://user-images.githubusercontent.com/84376570/226113239-2459a38b-1924-4679-8bd6-1cb6800b8a7f.png)
-
-
-
-#### Comparing alpha to their corresponding number of principle components after changing percentage of training split into 70% and test split into 30%
-- this figure shows that number of principle components increase as alpha increases until a certain limit.
-- it is obvious that the curve has the same shape as the last splits but with higher values as the training data has increased
-so the number of principle components needed to handle the same total percentage of the variance increased.
-![image](https://user-images.githubusercontent.com/84376570/226113277-9f70238f-c133-48c5-9b5e-f7edeb73ba0e.png)
 
 #### Using K-NN Classifier after PCA
 - KNN classifier is a non-parametric method used for classification and regression. In both cases, the input consists of the k closest training examples in the feature space. The output is determined by the majority of the classes of the k nearest neighbors.
@@ -116,8 +91,8 @@ so the number of principle components needed to handle the same total percentage
 
 ![image](https://user-images.githubusercontent.com/84376570/226113668-e477a959-43d0-4fcb-8468-38b3c4d69b27.png)
 
-
 - this table shows difference in number of principle components
+
 ![image](https://user-images.githubusercontent.com/84376570/226113679-1aa2a029-c65d-426f-bd6d-cd1949f05724.png)
 
 #### Using PCA Variations
@@ -135,7 +110,7 @@ so the number of principle components needed to handle the same total percentage
 - Kernel PCA, specifically using the radial basis function (RBF) kernel, may fail when the dataset has a large number of dimensions or when the number of data points is much larger than the number of dimensions. This is because the kernel matrix can become very large and computationally expensive to compute and manipulate. Additionally, the choice of kernel function and its parameters can greatly affect the performance of kernel PCA. In contrast, normal PCA may perform better in high-dimensional datasets or when the relationships between variables are linear, as it is designed to capture linear relationships between variables.
 - RBF kernel PCA uses the radial basis function kernel, which is a Gaussian function that measures the distance between data points in the original space. This kernel is useful for capturing non-linear relationships between variables that cannot be captured by linear PCA.While Polynomial kernel PCA uses a polynomial kernel, which is a power function that measures the dot product between data points in the original space raised to a certain power. This kernel is also useful for capturing non-linear relationships between variables, but is more sensitive to outliers and noise than the RBF kernel.
 
-- ![image](https://user-images.githubusercontent.com/84376570/226116045-eb0d999c-74f4-413a-8fb0-497f218c7dbc.png)
+![image](https://user-images.githubusercontent.com/84376570/226116045-eb0d999c-74f4-413a-8fb0-497f218c7dbc.png)
 
 ### LDA 
 - Linear Discriminant Analysis (LDA) is a dimensionality reduction technique that is used to reduce the number of features in a dataset while maintaining the class separability. LDA is a supervised technique, meaning that it uses the class labels to perform the dimensionality reduction. LDA is a popular technique for dimensionality reduction in the field of pattern recognition and machine learning. 
@@ -196,17 +171,22 @@ so the number of principle components needed to handle the same total percentage
 
 1. Success & failure cases figure
    - PCA
-   - ![image](https://user-images.githubusercontent.com/84376570/226126375-a50263e2-d5c9-40b4-9497-88e8a0387e91.png)
+ 
+![image](https://user-images.githubusercontent.com/84376570/226126375-a50263e2-d5c9-40b4-9497-88e8a0387e91.png)
    - LDA
-   - ![image](https://user-images.githubusercontent.com/84376570/226126647-0dfb68e5-6ff9-4e15-9b28-758d04d1e4cf.png)
+   
+![image](https://user-images.githubusercontent.com/84376570/226126647-0dfb68e5-6ff9-4e15-9b28-758d04d1e4cf.png)
 
 
 2. We will use 1 dominant eigenvector for LDA as we have 2 classes
 3. Accuracy vs number of non-face images figure
     - PCA
-    - ![image](https://user-images.githubusercontent.com/84376570/226126339-7bb42742-0965-4453-8074-2fa0bb3de6e1.png)
+    
+![image](https://user-images.githubusercontent.com/84376570/226126339-7bb42742-0965-4453-8074-2fa0bb3de6e1.png)
+
     - LDA
-    - ![image](https://user-images.githubusercontent.com/84376570/226126627-0497f70d-5e22-4934-9fd5-71f7a9039f58.png)
+    
+![image](https://user-images.githubusercontent.com/84376570/226126627-0497f70d-5e22-4934-9fd5-71f7a9039f58.png)
 
 4. As the number of non-face images increases, the accuracy of the classifier decreases, in contrast to what might be expected. This is because the number of points in the space increases, and the K-NN classifier is more likely to be confused by the noise in the data. This is a limitation of the classifier, and is not a problem with the data. The noise causes the space to be more complex and the gaps between the classes to be smaller and smaller which is more likely to cause confusion for the K-NN classifier.
   
